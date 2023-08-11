@@ -1,7 +1,7 @@
 import { MongoClient } from 'mongodb';
 
 export default async function handler(req, res) {
-    const uri = "mongodb+srv://portalUser:portalUser@cluster0.m5jcgxf.mongodb.net/NewsPortal?retryWrites=true&w=majority";
+    const uri = process.env.NEXT_PUBLIC_URI;
 
     const client = new MongoClient(uri, {
         useNewUrlParser: true,
